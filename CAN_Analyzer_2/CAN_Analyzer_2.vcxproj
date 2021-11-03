@@ -116,10 +116,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\boost\boost_1_66_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\boost\boost_1_66_0;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -130,6 +133,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,12 +143,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="VINCommand.cpp" />
     <ClCompile Include="CAN_Analyzer_2.cpp" />
+    <ClCompile Include="CMA_Utils.cpp" />
+    <ClCompile Include="CommandProcessor.cpp" />
+    <ClCompile Include="ErrorCommand.cpp" />
+    <ClCompile Include="ExitCommand.cpp" />
     <ClCompile Include="FileReader.cpp" />
+    <ClCompile Include="UserInputHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DataStructures.h" />
+    <ClInclude Include="VINCommand.h" />
+    <ClInclude Include="ByteSequenceExtractor.h" />
+    <ClInclude Include="CMA_Types.h" />
+    <ClInclude Include="CMA_Utils.h" />
+    <ClInclude Include="Command.h" />
+    <ClInclude Include="CommandProcessor.h" />
+    <ClInclude Include="ErrorCommand.h" />
+    <ClInclude Include="ExitCommand.h" />
     <ClInclude Include="FileReader.h" />
+    <ClInclude Include="UserInputHandler.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

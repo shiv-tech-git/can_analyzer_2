@@ -2,7 +2,7 @@
 #include <vector>
 #include <string>
 #include <unordered_map>
-#include "DataStructures.h"
+#include "CMA_Types.h"
 
 class FileReader {
 public:
