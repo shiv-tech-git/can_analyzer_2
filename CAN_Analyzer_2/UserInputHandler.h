@@ -7,9 +7,9 @@ class UserInputHandler {
 public:
 	UserInputHandler();
 	USER_CMD get_user_command();
-	std::string get_user_input(std::string request);
+	std::wstring get_user_input(std::wstring request);
 
 private:
-	USER_CMD parse_user_input(std::string input);
-	std::vector<std::string> split(std::string str, std::string delimiter);
+	USER_CMD parse_user_input(std::wstring input);
+	std::vector<std::wstring> split(std::wstring str, std::wstring delimiter);
 };

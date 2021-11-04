@@ -41,7 +41,7 @@ CM_CAN_NUMBER_T FileReader::get_can_number(char* msg) {
     return msg[15] &= 15;
 }
 
-FILE_DATA FileReader::parse_log_file(std::string file_path) {
+FILE_DATA FileReader::parse_log_file(std::wstring file_path) {
     std::ifstream input(file_path, std::ios::binary);
     std::vector<unsigned char> buffer(std::istreambuf_iterator<char>(input), {});
     
@@ -73,13 +73,13 @@ void FileReader::add_can_msg(std::vector<unsigned char>::iterator& it, std::unor
 }
 
 
-std::string FileReader::get_file_name_from_path(std::string full_path) {
+std::wstring FileReader::get_file_name_from_path(std::wstring full_path) {
     size_t start;
     size_t end = 0;
     char delim = '\\';
-    std::vector<std::string> tmp;
+    std::vector<std::wstring> tmp;
 
-    while ((start = full_path.find_first_not_of(delim, end)) != std::string::npos)
+    while ((start = full_path.find_first_not_of(delim, end)) != std::wstring::npos)
     {
         end = full_path.find(delim, start);
         tmp.push_back(full_path.substr(start, end - start));

@@ -88,6 +88,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -102,6 +103,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -143,6 +145,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DirCommand.cpp" />
+    <ClCompile Include="FileCommand.cpp" />
+    <ClCompile Include="SortCommand.cpp" />
+    <ClCompile Include="CMA_State.cpp" />
     <ClCompile Include="VINCommand.cpp" />
     <ClCompile Include="CAN_Analyzer_2.cpp" />
     <ClCompile Include="CMA_Utils.cpp" />
@@ -153,6 +159,10 @@
     <ClCompile Include="UserInputHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CMA_State.h" />
+    <ClInclude Include="DirCommand.h" />
+    <ClInclude Include="FileCommand.h" />
+    <ClInclude Include="SortCommand.h" />
     <ClInclude Include="VINCommand.h" />
     <ClInclude Include="ByteSequenceExtractor.h" />
     <ClInclude Include="CMA_Types.h" />

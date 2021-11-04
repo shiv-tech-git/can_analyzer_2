@@ -6,10 +6,10 @@
 
 class FileReader {
 public:
-	FILE_DATA parse_log_file(std::string file_path);
+	FILE_DATA parse_log_file(std::wstring file_path);
 
 private:
-    std::string get_file_name_from_path(std::string full_path);
+    std::wstring get_file_name_from_path(std::wstring full_path);
     std::unordered_map<CM_ID_T, std::vector<CAN_MSG> > get_log_file_msg(std::vector<unsigned char> buffer);
     void add_can_msg(std::vector<unsigned char>::iterator& it, std::unordered_map<CM_ID_T, std::vector<CAN_MSG> >& result);
     CM_TIMESTAMP_T get_time(char* msg);

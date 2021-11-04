@@ -1,5 +1,6 @@
 #pragma once
 #include "CMA_Types.h"
+#include <iostream>
 
 class Command {
 public:
