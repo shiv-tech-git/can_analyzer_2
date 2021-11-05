@@ -69,7 +69,7 @@ void FileReader::add_can_msg(std::vector<unsigned char>::iterator& it, std::unor
     CAN_MSG tmp;
     char* cm_ptr = (char*)(void*)&(*it);
     CM_ID_T id = get_id(cm_ptr);
-    result[id].push_back({ id, get_data(cm_ptr), get_time(cm_ptr), get_can_number(cm_ptr) });
+    result[id].push_back({ id, get_data(cm_ptr), get_time(cm_ptr), get_can_number(cm_ptr), get_data_size(cm_ptr) });
 }
 
 

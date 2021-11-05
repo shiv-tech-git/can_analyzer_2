@@ -145,10 +145,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AnalogCommand.cpp" />
     <ClCompile Include="DirCommand.cpp" />
     <ClCompile Include="FileCommand.cpp" />
+    <ClCompile Include="PulseCommand.cpp" />
     <ClCompile Include="SortCommand.cpp" />
     <ClCompile Include="CMA_State.cpp" />
+    <ClCompile Include="StepsCommand.cpp" />
     <ClCompile Include="VINCommand.cpp" />
     <ClCompile Include="CAN_Analyzer_2.cpp" />
     <ClCompile Include="CMA_Utils.cpp" />
@@ -159,10 +162,13 @@
     <ClCompile Include="UserInputHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AnalogCommand.h" />
     <ClInclude Include="CMA_State.h" />
     <ClInclude Include="DirCommand.h" />
     <ClInclude Include="FileCommand.h" />
+    <ClInclude Include="PulseCommand.h" />
     <ClInclude Include="SortCommand.h" />
+    <ClInclude Include="StepsCommand.h" />
     <ClInclude Include="VINCommand.h" />
     <ClInclude Include="ByteSequenceExtractor.h" />
     <ClInclude Include="CMA_Types.h" />

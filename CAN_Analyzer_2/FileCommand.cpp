@@ -1,6 +1,4 @@
 #include "FileCommand.h"
-#include "CMA_State.h"
-#include "CMA_Utils.h"
 
 void FileCommand::execute(USER_CMD user_cmd) {
 	if (user_cmd.plain_args.size() == 0) {

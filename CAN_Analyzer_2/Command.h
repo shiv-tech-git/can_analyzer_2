@@ -1,5 +1,8 @@
 #pragma once
 #include "CMA_Types.h"
+#include "CMA_State.h"
+#include "CMA_Utils.h"
+#include "FileReader.h"
 #include <iostream>
 
 class Command {

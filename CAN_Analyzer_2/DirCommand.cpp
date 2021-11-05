@@ -1,6 +1,4 @@
 #include "DirCommand.h"
-#include "CMA_Utils.h"
-#include "CMA_State.h"
 
 void DirCommand::execute(USER_CMD user_cmd) {
 	if (user_cmd.plain_args.size() == 0) {

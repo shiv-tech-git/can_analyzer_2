@@ -18,6 +18,7 @@ struct CAN_MSG
     CM_DATA_T data;
     CM_TIMESTAMP_T timestamp;
     CM_CAN_NUMBER_T can_number;
+    CM_DATA_SIZE_T data_size;
 };
 
 struct FILE_DATA
@@ -46,10 +47,18 @@ enum edge_type { leading, trailing };
 struct EDGE {
     edge_type edge;
     CM_TIMESTAMP_T timestamp;
+    CM_BYTE_T old_value;
+    CM_BYTE_T current_value;
 };
 
 struct EDGE_SEQUENCE {
     CM_ID_T id;
     CM_DATA_SIZE_T byte_number;
     std::vector<EDGE> edges;
+};
+
+struct BYTE_SEQUENCE {
+    CM_ID_T id;
+    CM_DATA_SIZE_T byte_number;
+    std::vector<CM_BYTE_T> bytes;
 };
